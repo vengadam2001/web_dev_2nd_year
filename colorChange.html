@@ -1,0 +1,84 @@
+<html> 
+  
+<head>
+<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <style type="text/css">
+        #s1 { 
+            margin-top:0%;
+            margin-left:10%;
+            height: 40%; 
+            width: 40%; 
+            border-radius: 50%; 
+            display: none; 
+        }
+          
+        #s2 { 
+            margin-top:10%;
+            margin-left:40%;
+            height: 40%; 
+            width: 40%; 
+            display: none; 
+        }
+          
+        #s3 { 
+            margin-top:10%;
+            margin-left:40%;
+            height: 40%; 
+            width: 40%; 
+            display: none; 
+        }
+        #inst{
+            margin: 50px;
+        }
+        li{
+            list-style: none;
+        }
+        #proceed-alert{
+            margin:5%;
+        }
+        #inst{
+            margin:5%;
+            padding-right: 10%;
+            padding-top: 5%;
+            padding-left: 15%;
+            padding-bottom: 5%;
+        }
+    </style> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head> 
+  
+<body>
+    <div id = "inst">
+        <h3>Click the Shape</h3>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">A shape will be displayed on the screen</li>
+                <li class="list-group-item">Click the shape once you see it</li>
+                <li class="list-group-item">On clicking the shape would change and move</li>
+                <li class="list-group-item">Continue the same again</li>
+                <li class="list-group-item">Click start, when you are ready</li>
+            </ul>
+        <li><button id="button" class="btn btn-lg btn-success" style="margin: 5px;" onclick="myfun()">Start Game</button></li>
+    </div> 
+    <div>
+        <p id="time"></p> 
+        <div id="s1"></div> 
+        <div id="s2"></div> 
+        <div id="s3"></div> 
+    </div> 
+    <div class="alert alert-success" id="proceed-alert" style="display: none;" role="alert">
+          <h2 id="alert-heading"></h2>
+          <h3 id="game2"></h3>
+          <hr>
+          <a href="blockIns.html"><button class="btn btn-lg btn-success" style="font-size: 1.5em; width: 50%; margin-left: 30%;">Next <i class="fa fa-angle-double-right" style="font-size: 1em;"></i></button></a>
+        </div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="index.js"></script> 
+</body> 
+  
+</html>

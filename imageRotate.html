@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  <title>Rotating Image</title>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	  <style>
+	    .picture {
+	    	transition: transform 0.3s;
+	      	transform-origin: 0% 0%;
+	      	transform-origin: 100% 100%;
+	      	transform-origin: 0% 100%;
+	    }
+	    img{
+	      	height: 200px;
+	      	left: 50%;
+	      	margin-top: -100px;
+	      	margin-left: -100px;
+	      	position: absolute;
+	      	top: 24%;
+	      	width: 200px;
+	      	display: none;
+	    }
+	    .navbtn{
+	    	border:none;
+	    	padding: 1%;
+	    	cursor: pointer;
+	      	position:absolute; 
+	    }
+	    .navbtn:hover{
+	    	background-image: linear-gradient(to top left, #ffffff 0%, #3399ff 100%);
+	    }
+	    #rotate-clock{
+	      	right:40%;
+	      	bottom:70px;
+	 	}
+	    #rotate-anti{
+	      	left:40%;
+	      	bottom:70px;
+	  	}
+	    #answercheck{
+	      	left:41%;
+	      	bottom:10px;
+	    }
+	    #snackbar {
+			  visibility: hidden; 
+			  min-width: 250px; 
+			  margin-left: -125px; 
+			  background: linear-gradient(to top left, #ffffff 0%, #cc0000 50%);
+			  color: white; 
+			  text-align: center;
+			  border-radius: 2px; 
+			  padding: 16px;
+			  position: fixed; 
+			  z-index: 1; 
+			  left: 50%; 
+			  top: 30px; 
+			}
+
+
+			#snackbar.show {
+			  visibility: visible; 
+			  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+			  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+			}
+			@-webkit-keyframes fadein {
+			  from {top: 0; opacity: 0;}
+			  to {top: 30px; opacity: 1;}
+			}
+
+			@keyframes fadein {
+			  from {top: 0; opacity: 0;}
+			  to {top: 30px; opacity: 1;}
+			}
+
+			@-webkit-keyframes fadeout {
+			  from {top: 30px; opacity: 1;}
+			  to {top: 0; opacity: 0;}
+			}
+
+			@keyframes fadeout {
+			  from {top: 30px; opacity: 1;}
+			  to {top: 0; opacity: 0;}
+			}
+	    li{
+	    	list-style: none;
+	    }
+	    #instruction{
+	    	margin:5%;
+		    padding-right: 10%;
+		    padding-top: 5%;
+		    padding-left: 15%;
+		    padding-bottom: 5%;
+	    }
+	    #imageRotate{
+	    	display: none;
+	    }
+	    i{
+	    	margin: 5px;
+	    }
+	    #redo{
+		  -webkit-transform: scaleX(-1);
+		  transform: scaleX(-1);
+	    }
+	    #proceed-alert{
+	    	margin:5%;
+	    }
+	  </style>
+	</head>
+	<body>
+		<div id="instruction">
+			<h3>Correct The Image</h3>
+			<ul class="list-group list-group-flush">
+				<li class="list-group-item">An image will be displayed on the screen</li>
+				<li class="list-group-item">The image will be rotated</li>
+				<li class="list-group-item">Use the clockwise and anticlockwise buttons to rotate the image</li>
+				<li class="list-group-item">Once you see the image straight, Click the button</li>
+				<li class="list-group-item">Click start, when you are ready</li>
+			</ul>
+			<li><button type="button" class="btn btn-lg btn-success" style="margin: 5px;" onclick="setrotation()">Start Game</button></li>
+		</div>
+
+		<div id="imageRotate">
+			<button class = "navbtn btn" id="rotate-anti" style="margin: 2px;"><i class="fa fa-undo"></i>Left Rotate</button>
+		  	<button class = "navbtn btn" id="rotate-clock" style="margin: 2px;">Right Rotate<i id = "redo" class="fa fa-undo"></i></button>
+		  	<br>
+		  	<br>
+		  	<button class = "navbtn btn" id="answercheck" style="margin: 2px;" onclick="verify()">Click when the image is straight<i class="fa fa-check"></i></button>
+			<img class="picture" id = "pic1" src="img/pic1.jpg"/>
+		  	<img class="picture" id = "pic2" src="img/pic2.jpg"/>
+		  	<img class="picture" id = "pic3" src="img/pic3.jpg"/>
+		  	<img class="picture" id = "pic4" src="img/pic4.jpg"/>
+		</div>
+	  	<div class="alert alert-success" id="proceed-alert" style="display: none;" role="alert">
+		  <h2 id="alert-heading"></h2>
+		  <h3 id="game1"></h3>
+		  <hr>
+		  <a href="colorChange.html"><button class="btn btn-lg btn-success" style="font-size: 1.5em; width: 50%; margin-left: 30%;">Next<i class="fa fa-angle-double-right" style="font-size: 1em;"></i></button></a>
+		</div>
+		<div id="snackbar">No...The image is not yet straight!</div>
+	  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  
+	  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  
+	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	  	<script type="text/javascript" src ="index.js"></script>
+	</body>
+</html>
