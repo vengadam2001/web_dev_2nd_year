@@ -13,7 +13,7 @@ app.get('/home/:obj',(req,res)=>{
   var o=JSON.parse(req.params.obj);
   o.ip=req.ip;
   console.log(o);
-var url = "mongodb://localhost:27017/";
+var url = "mongodb+srv://vengadam2001:sadasivam73@cluster0.kcoce.mongodb.net/?retryWrites=true&w=majority";
 mongo.connect(url, function(err, db) {
   if (err) console.log(err);
   var dbo = db.db("project");
