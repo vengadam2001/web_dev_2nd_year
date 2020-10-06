@@ -1,7 +1,7 @@
 var app = require ('express')();
 var mongo = require('mongodb').MongoClient;
 var path=require('path');
-const port=20001;
+const port=process.env.PORT||20001;
 
 
 app.get('/',(req,res)=>{
