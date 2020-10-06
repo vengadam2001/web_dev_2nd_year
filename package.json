@@ -1,0 +1,26 @@
+{
+  "name": "web_dev_2nd_year_project",
+  "version": "0.0.5",
+  "description": "web based tool to calculate the reflex",
+  "main": "index_main.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http": "^0.0.1-security",
+    "mongodb": "^3.6.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vengadam2001/web_dev_2nd_year.git"
+  },
+  "author": "Thiruvengadam, Vishal, Kishan, Harshini, Sruthi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vengadam2001/web_dev_2nd_year/issues"
+  },
+  "homepage": "https://github.com/vengadam2001/web_dev_2nd_year#readme"
+}

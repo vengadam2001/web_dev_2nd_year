@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<title>Reflex Testing Tool - Home</title>
+	<style>
+		*{
+			list-style: none;
+		}
+		.alert{
+			margin:2%;	
+			border: 2px solid black;
+			border-radius: 20px;
+		}
+		.card{
+			margin:4%;
+			background: #cce5ff;
+			border: 2px solid black;
+			border-radius: 15px;
+		}
+	</style>
+	<script>
+		function loader(){
+		var quote = `“Once the lights are off, the brain will be able to process information much faster as there is no more interference. This allows for faster movement and swifter reaction time”<hr>
+			Dr. Alan Reichow `;
+		document.querySelector("#quote").innerHTML = quote;
+		var what = `Reflex is an action consisting of comparatively simple segments of behaviour that usually occur as direct and immediate responses to particular stimuli uniquely correlated with them.A reflex is made possible by neural pathways called reflex arcs which can act on an impulse before that impulse reaches the brain. The reflex is then an automatic response to a stimulus that does not receive or need conscious thought.`;
+		document.querySelector("#what").innerHTML = what;
+		var types = ["Deep – Tendon reflex","Withdrawal reflex","Startle reflex","Blink reflex","Gag reflex"];
+		types.forEach((item)=>{
+			document.querySelector("#types").innerHTML += `<li>${item}</li>`;
+		});
+		var reaction = `The length of time taken for a person or system to respond to a given stimulus or event.`;
+		document.querySelector("#reaction").innerHTML = reaction;
+		var diff = `Whereas reactions enable us to respond to all kinds of stimuli, reflexes are specifically designed to protect us from harm. Since these need to be processed faster than an actual reaction, the signals go directly through the spinal cord and do not involve our brain. In contrast, our reactions need to be processed through the brain first.`
+		document.querySelector("#diff").innerHTML = diff;
+		var need = `Having a fast reaction time means that your brain and spinal cord are quickly sending messages to your bones, muscles, and joints in order to make movements.<br>
+			Reaction time is important because it helps protect the body from potential injury and harm. Let’s say you slip and fall on ice 
+			 a fast reaction time could mean the difference between catching yourself and hitting your head. It isn’t just getting into an
+			 accident that requires a fast reaction time, however.<br>
+			Ordinary daily actions are also strengthened and made safer by having a prompt reaction time. Driving, walking, cooking,
+			running, and even doing the laundry are all examples of activities that require a fast reaction time. Without a quick reaction,
+			these seemingly mundane activities can become opportunities for injury.`
+		document.querySelector("#need").innerHTML = need;
+		var improve = `Unlike reflexes, which aren’t processed by the brain, reaction time can be strengthened and improved through lifestyle changes. Cognitive exercises, meditation and mindfulness, and nutritional supplements are all factors that can boost reaction time in a safe and healthy way.`;
+		document.querySelector("#improve").innerHTML = improve;
+		var sports = `Exercises such as ladder drills, agility drills, and specialized plyometrics can aid in decreasing reaction time. Elite athletes are also turning to digital reaction drills to help the brain process more information in less time. Kawhi Leonard of the Toronto Raptors used strobe glasses to help the brain process visual stimuli more quickly and efficiently. Similar to ball drills, these goggles have strobe lights inside, which forces the brain to work through more complicated stimuli than usual.`;
+		document.querySelector("#sports").innerHTML = sports;
+		var games = `While many gamers get slack for staring at their screens all day, most people don’t know just how much their brain is at work. In fact, numerous studies over the past fifteen years have demonstrated that people who play action video games have higher cognitive abilities than people who don’t. This is because action video games, like Counter-Strike, Fortnite, and For Honor, all require a very fast reaction time in order to play. They also require skills associated with reaction time, such as spatial attention, multitasking, and adapting to predetermined rules.`;
+		document.querySelector("#games").innerHTML = games;
+		var simon = `The Simon Effect, a conflict in the attention system, is when reaction time slows down as sensory stimulants are moved farther away. The Simon Effect is present in sports where a ball kicked from father away may be harder for a goalie to stop. This study showed that action video games can lessen the negative impact of the stimulus being far away. In other words, playing action games can improve reaction time, regardless of where the stimulus is.`;
+		document.querySelector("#simon").innerHTML = simon;
+	}
+	</script>
+</head>
+<body onload="loader()">
+	<nav class="navbar navbar-expand-lg navbar-light" style="height: 80px; background:linear-gradient(to right, #0000cc 0%, #ccffff 100%);">
+	  <a class="navbar-brand" href="home.html" style="color: white; font-size: 1.5em">Reflex Testing Tool</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collape" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	    <div class="navbar-nav">
+	      <a class="nav-item nav-link active" style="color: white;" href="home.html">Home <span class="sr-only">(current)</span></a>
+	      <a class="nav-item nav-link" style="color: white;" href="about.html">About</a>
+	      <a class="nav-item nav-link" style="color: white;" href="index.html">Games</a>
+	    </div>
+	  </div>
+	</nav>
+	<div class="alert alert-success" role="alert" id="quote"></div>
+	<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">What is a Reflex?</h5>
+        <p class="card-text" id="what"></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Types of Reflex</h5>
+        <ul class="card-text" id="types"></ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Reaction Time</h5>
+        <p class="card-text" id="reaction"></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">How can we improve it?</h5>
+        <p class="card-text" id="improve"></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Why do we need a faster Reaction time?</h5>
+        <p class="card-text" id="need"></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Reaction Time Vs. Reflexes</h5>
+        <p class="card-text" id="diff"></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Application in Sports</h5>
+        <p class="card-text" id="sports"></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Application in Games</h5>
+        <p class="card-text" id="games"></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">The Simon Effect</h5>
+        <p class="card-text" id="simon"></p>
+      </div>
+    </div>
+  </div>
+</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
