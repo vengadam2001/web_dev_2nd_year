@@ -33,13 +33,19 @@
 	<div id="scoreboard">
 		<h3 style="color: #2e23cc">Score Board</h3>
 		<ul class="list-group list-group-flush">
-			<li id="name" class="list-group-item">Name: </li>
-			<li id="age" class="list-group-item">Age: </li>
-			<li id="gender" class="list-group-item">Gender: </li>
-			<li id="score" class="list-group-item">Score: </li>
+			<li  class="list-group-item">Name: <span id="name"></span></li>
+			<li  class="list-group-item" style="color:blue"> <strong>YOUR SCORE</strong></li>
+			<li  class="list-group-item">Thinking Reflex Test(1):<span id="test1"></span></li>
+			<li  class="list-group-item">Reflex Test(2):<span id="test2"></span></li>
+			<li  class="list-group-item">Concentation Test(3):<span id="test3"></span></li>
 		</ul>
 	</div>
-
+	<script>
+		document.getElementById("name").innerText=` ->${localStorage.getItem('name')}`;
+		document.getElementById("test1").innerText=` ->${localStorage.getItem('g1')}`;
+		document.getElementById("test2").innerText=` ->${localStorage.getItem('g2')}`;
+		document.getElementById("test3").innerText=` ->${localStorage.getItem('g3')}`;
+	</script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

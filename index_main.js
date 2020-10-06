@@ -5,7 +5,7 @@ const port=20001;
 
 
 app.get('/',(req,res)=>{
-res.sendFile(path.join(__dirname,"index.html"));
+res.sendFile(path.join(__dirname,"home.html"));
 });
 
 app.get('/home/:obj',(req,res)=>{
@@ -23,12 +23,11 @@ mongo.connect(url, function(err, db) {
     db.close();
   });
 });
-
 try{
-res.redirect(`http://117.222.142.193:${port}/`);
+res.redirect(`http://117.213.90.122:${port}/final.html`);
 }
 catch (e){
-res.redirect(`http://localhost:${port}/`);
+res.redirect(`http://localhost:${port}/final.html`);
 }
 // res.send(`<div> <h1> <center>Thank You ! </center></h1>  <br> <a href="localhost:20001"></a></div>`);
 });
@@ -64,6 +63,22 @@ app.get('/details.html',(req,res)=>{
 res.sendFile(path.join(__dirname,"details.html"));
 });
 
+app.get('/final.html',(req,res)=>{
+  res.sendFile(path.join(__dirname,"final.html"));
+});
+
+app.get('/home.html',(req,res)=>{
+  res.sendFile(path.join(__dirname,"home.html"));
+});
+  
+app.get('/about.html',(req,res)=>{
+  res.sendFile(path.join(__dirname,"about.html"));
+});
+
+app.get('/index.html',(req,res)=>{
+  res.sendFile(path.join(__dirname,"index.html"));
+});
+      
 app.get('/img/pic1.jpg',(req,res)=>{
   res.sendFile(path.join(__dirname,"img/pic1.jpg"));
 });

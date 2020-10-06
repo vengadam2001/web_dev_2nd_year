@@ -39,7 +39,7 @@ function pop(){
         if(blockLeft<45 && blockLeft>-45 && characterTop>=300 ){
             block.style.animation = "none";
             alert("Game Over. Score: "+Math.floor(counter/100));
-            var de=prompt("Enter stop to exit or click Cancel to try again");
+            var de=prompt("Enter 'stop' or click Cancel to try again");
             if(de=="stop"){
                 setTimeout(function(){
                     character.classList.remove("character")

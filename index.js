@@ -183,6 +183,7 @@ function getLocation() {
 {
 player.gender=document.getElementById("gender").value;
 player.Name=document.getElementById("name").value;
+localStorage.setItem("name",player.Name);
 player.Age=document.getElementById("age").value;
 player.Latitude=NaN;
 player.Longitude=NaN;
@@ -192,7 +193,7 @@ player.game3= parseInt(localStorage.getItem('g3'));
 getLocation();
 console.log(["object",player]);
 console.log(`hello  ${window.location.origin}home/${JSON.stringify(player)} `);
-document.getElementById("hello").href="http://117.222.142.193:20001/home/"+JSON.stringify(player);
+document.getElementById("hello").href="http://117.213.90.122:20001/home/"+JSON.stringify(player);
 
 }
 
