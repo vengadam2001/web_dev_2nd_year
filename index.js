@@ -193,7 +193,7 @@ player.game3= parseInt(localStorage.getItem('g3'));
 getLocation();
 console.log(["object",player]);
 console.log(`hello  ${window.location.origin}home/${JSON.stringify(player)} `);
-document.getElementById("hello").href="http://117.213.90.122:20001/home/"+JSON.stringify(player);
+document.getElementById("hello").href="http://117.213.88.218:20001/home/"+JSON.stringify(player);
 
 }
 

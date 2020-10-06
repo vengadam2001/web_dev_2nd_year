@@ -24,7 +24,7 @@ mongo.connect(url, function(err, db) {
   });
 });
 try{
-res.redirect(`http://117.213.90.122:${port}/final.html`);
+res.redirect(`http://117.213.88.218:${port}/final.html`);
 }
 catch (e){
 res.redirect(`http://localhost:${port}/final.html`);
